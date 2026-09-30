@@ -1,0 +1,20 @@
+[
+  {
+    "policy_id": "sample-securehealth",
+    "insurer": "Sample General Insurance",
+    "product": "SecureHealth Plus",
+    "file": "sample_securehealth.pdf"
+  },
+  {
+    "policy_id": "sample-arogyashield",
+    "insurer": "Bharat Health Assurance",
+    "product": "ArogyaShield",
+    "file": "sample_arogyashield.pdf"
+  },
+  {
+    "policy_id": "sample-totalcare",
+    "insurer": "Meridian Insurance",
+    "product": "TotalCare Gold",
+    "file": "sample_totalcare.pdf"
+  }
+]

@@ -1,0 +1,182 @@
+[
+  {
+    "id": "c01",
+    "policy_id": "sample-securehealth",
+    "tests": "specific waiting period not completed",
+    "scenario": "A 52 year old man underwent a total knee replacement. The policy started on 2024-06-01 and he was admitted on 2025-06-15. Sum insured is 5,00,000. The hospital bill is 3,20,000. Room rent charged was 4,000 per day.",
+    "expected_decision": "not_payable",
+    "expected_amount": 0,
+    "governing_section": "4.2"
+  },
+  {
+    "id": "c02",
+    "policy_id": "sample-securehealth",
+    "tests": "waiting period satisfied, procedure sub-limit binds",
+    "scenario": "A 45 year old woman underwent a total knee replacement. Her policy has been continuously in force since 2022-01-10 and she was admitted on 2025-03-20. Sum insured is 5,00,000. The hospital bill is 3,00,000. Room rent charged was 4,000 per day.",
+    "expected_decision": "partially_payable",
+    "expected_amount": 150000,
+    "governing_section": "6.1"
+  },
+  {
+    "id": "c03",
+    "policy_id": "sample-securehealth",
+    "tests": "cataract sub-limit, no co-payment because entry age below 60",
+    "scenario": "A 58 year old man had cataract surgery on one eye. The policy has run continuously since 2021-03-01 and he was admitted on 2025-01-10. Sum insured is 3,00,000. The bill is 65,000. Room rent was 2,500 per day.",
+    "expected_decision": "partially_payable",
+    "expected_amount": 40000,
+    "governing_section": "6.1"
+  },
+  {
+    "id": "c04",
+    "policy_id": "sample-securehealth",
+    "tests": "permanent exclusion, cosmetic surgery",
+    "scenario": "A 34 year old woman claimed for cosmetic rhinoplasty performed for appearance reasons, with no accident involved. The policy started on 2020-04-01 and she was admitted on 2025-02-11. Sum insured is 4,00,000 and the bill is 1,80,000. Room rent was 3,000 per day.",
+    "expected_decision": "not_payable",
+    "expected_amount": 0,
+    "governing_section": "5.1"
+  },
+  {
+    "id": "c05",
+    "policy_id": "sample-arogyashield",
+    "tests": "permanent exclusion, bariatric surgery for obesity",
+    "scenario": "A 41 year old man underwent bariatric surgery for weight reduction. The policy started on 2019-07-01 and admission was on 2025-04-05. Sum insured is 6,00,000 and the bill is 4,50,000. Room rent was 4,000 per day.",
+    "expected_decision": "not_payable",
+    "expected_amount": 0,
+    "governing_section": "5.1"
+  },
+  {
+    "id": "c06",
+    "policy_id": "sample-arogyashield",
+    "tests": "room rent proportionate deduction",
+    "scenario": "A 40 year old man was hospitalised for an emergency appendectomy. The policy has been in force since 2023-01-01 and he was admitted on 2025-02-10. Sum insured is 5,00,000. The bill is 2,00,000 and the room rent charged was 8,000 per day.",
+    "expected_decision": "partially_payable",
+    "expected_amount": 125000,
+    "governing_section": "3.1"
+  },
+  {
+    "id": "c07",
+    "policy_id": "sample-arogyashield",
+    "tests": "co-payment for an insured above 65",
+    "scenario": "A 68 year old man was admitted for angioplasty with stent placement. The policy has run since 2019-05-01 and he was admitted on 2025-03-12. Sum insured is 5,00,000. The bill is 1,50,000 and room rent was 4,000 per day.",
+    "expected_decision": "partially_payable",
+    "expected_amount": 127500,
+    "governing_section": "7.1"
+  },
+  {
+    "id": "c08",
+    "policy_id": "sample-arogyashield",
+    "tests": "pre-existing disease waiting period not completed",
+    "scenario": "A 57 year old woman was admitted for diabetic nephropathy. Diabetes was diagnosed before she bought the policy and is a declared pre-existing condition. The policy started on 2023-01-01 and she was admitted on 2025-06-01. Sum insured is 4,00,000, the bill is 2,20,000, and room rent was 4,500 per day.",
+    "expected_decision": "not_payable",
+    "expected_amount": 0,
+    "governing_section": "4.3"
+  },
+  {
+    "id": "c09",
+    "policy_id": "sample-totalcare",
+    "tests": "pre-existing disease waiting period satisfied, full payment",
+    "scenario": "A 60 year old man was admitted for treatment of hypertension related complications, declared as a pre-existing condition at the time of purchase. The policy has been continuously in force since 2022-01-01 and he was admitted on 2025-05-01. Sum insured is 4,00,000. The bill is 1,80,000 and room rent was 6,000 per day.",
+    "expected_decision": "payable",
+    "expected_amount": 180000,
+    "governing_section": "4.3"
+  },
+  {
+    "id": "c10",
+    "policy_id": "sample-totalcare",
+    "tests": "cataract sub-limit under a different insurer",
+    "scenario": "A 63 year old woman had cataract surgery on the right eye. The policy has been in force since 2021-08-01 and she was admitted on 2025-04-18. Sum insured is 5,00,000. The bill is 70,000 and room rent was 5,000 per day.",
+    "expected_decision": "partially_payable",
+    "expected_amount": 50000,
+    "governing_section": "6.1"
+  },
+  {
+    "id": "c11",
+    "policy_id": "sample-totalcare",
+    "tests": "permanent exclusion, dental treatment without accident",
+    "scenario": "A 29 year old man claimed for root canal treatment and dental crowns done at a dental clinic, not following any accident. The policy started on 2021-02-01 and treatment was on 2025-01-20. Sum insured is 3,00,000 and the bill is 60,000.",
+    "expected_decision": "not_payable",
+    "expected_amount": 0,
+    "governing_section": "5.1"
+  },
+  {
+    "id": "c12",
+    "policy_id": "sample-totalcare",
+    "tests": "specific waiting period of 12 months not completed",
+    "scenario": "A 47 year old man underwent hernia repair surgery. The policy started on 2024-09-01 and he was admitted on 2025-05-10. Sum insured is 3,00,000. The bill is 90,000 and room rent was 5,000 per day.",
+    "expected_decision": "not_payable",
+    "expected_amount": 0,
+    "governing_section": "4.2"
+  },
+  {
+    "id": "c13",
+    "policy_id": "sample-totalcare",
+    "tests": "specific waiting period completed, no deductions apply",
+    "scenario": "A 47 year old man underwent hernia repair surgery. The policy has been in force since 2023-01-01 and he was admitted on 2025-02-01. Sum insured is 3,00,000. The bill is 90,000 and room rent was 5,000 per day.",
+    "expected_decision": "payable",
+    "expected_amount": 90000,
+    "governing_section": "4.2"
+  },
+  {
+    "id": "c14",
+    "policy_id": "sample-securehealth",
+    "tests": "room rent deduction, then sub-limit, then co-payment together",
+    "scenario": "A 64 year old man underwent a total knee replacement. He bought the policy at the age of 62 and it has been in force since 2020-01-01. He was admitted on 2025-04-01. Sum insured is 5,00,000. The bill is 4,00,000 and the room rent charged was 8,000 per day.",
+    "expected_decision": "partially_payable",
+    "expected_amount": 120000,
+    "governing_section": "7.1"
+  },
+  {
+    "id": "c15",
+    "policy_id": "sample-securehealth",
+    "tests": "accident inside the initial 30 day waiting period is still covered",
+    "scenario": "A 31 year old woman fractured her femur in a road accident and was admitted for surgery. The policy started on 2025-08-01 and she was admitted on 2025-08-20. Sum insured is 3,00,000. The bill is 80,000 and room rent was 2,000 per day.",
+    "expected_decision": "payable",
+    "expected_amount": 80000,
+    "governing_section": "4.1"
+  },
+  {
+    "id": "c16",
+    "policy_id": "sample-securehealth",
+    "tests": "permanent exclusion, injury from adventure sport",
+    "scenario": "A 26 year old man was injured while bungee jumping and required shoulder surgery. The policy has run since 2022-06-01 and he was admitted on 2025-05-14. Sum insured is 4,00,000. The bill is 1,40,000 and room rent was 3,500 per day.",
+    "expected_decision": "not_payable",
+    "expected_amount": 0,
+    "governing_section": "5.1"
+  },
+  {
+    "id": "c17",
+    "policy_id": "sample-securehealth",
+    "tests": "listed condition inside the 24 month specific waiting period",
+    "scenario": "A 44 year old woman had surgery for varicose veins in both legs. The policy started on 2024-01-01 and she was admitted on 2025-06-01. Sum insured is 3,00,000. The bill is 1,10,000 and room rent was 2,800 per day.",
+    "expected_decision": "not_payable",
+    "expected_amount": 0,
+    "governing_section": "4.2"
+  },
+  {
+    "id": "c18",
+    "policy_id": "sample-arogyashield",
+    "tests": "permanent exclusion, treatment for substance abuse",
+    "scenario": "A 38 year old man was admitted to a de-addiction facility for treatment of alcohol dependence. The policy has run since 2021-11-01 and he was admitted on 2025-03-03. Sum insured is 4,00,000. The bill is 1,20,000 and room rent was 3,000 per day.",
+    "expected_decision": "not_payable",
+    "expected_amount": 0,
+    "governing_section": "5.1"
+  },
+  {
+    "id": "c19",
+    "policy_id": "sample-totalcare",
+    "tests": "claim above the sum insured is capped at the sum insured",
+    "scenario": "A 55 year old man was admitted for a prolonged stay in intensive care following severe pneumonia. The policy has been in force since 2020-03-01 and he was admitted on 2025-01-05. Sum insured is 3,00,000. The bill is 5,00,000 and room rent was 5,000 per day.",
+    "expected_decision": "partially_payable",
+    "expected_amount": 300000,
+    "governing_section": "2.1"
+  },
+  {
+    "id": "c20",
+    "policy_id": "sample-arogyashield",
+    "tests": "cataract sub-limit followed by co-payment",
+    "scenario": "A 70 year old woman had cataract surgery on the left eye. The policy has been continuously in force since 2020-01-01 and she was admitted on 2025-03-01. Sum insured is 4,00,000. The bill is 55,000 and room rent was 3,000 per day.",
+    "expected_decision": "partially_payable",
+    "expected_amount": 25500,
+    "governing_section": "6.1"
+  }
+]
